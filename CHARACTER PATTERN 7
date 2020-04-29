@@ -1,0 +1,80 @@
+/*
+
+
+Write a program to generate the following pattern.
+
+bbbb*bbbb
+
+bbb***bbb
+
+bb***** bb
+
+b******* b
+
+*********
+
+ 
+
+ 
+
+Input and Output Format:
+
+Input consists of a single integer that corresponds to n, the number of rows. n is always an odd number.
+
+ 
+
+Sample Input :
+
+5
+
+ 
+
+Sample Output :
+
+bbbb*bbbb
+
+bbb***bbb
+
+bb***** bb
+
+b******* b
+
+*********
+
+ 
+
+*/
+
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int n,l=0;
+    scanf("%d",&n);
+    for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<n*2-1;j++)
+        {
+            
+            if(j>=n-1-l && j<=n-1+l)
+            {
+                printf("*");
+            }
+            else
+            {
+                printf("b");
+            }
+            
+        }
+        l++;
+        printf("\n");
+    }
+    
+	return 0;
+}
