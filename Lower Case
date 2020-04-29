@@ -1,0 +1,56 @@
+/*
+
+
+In these days kids are introduced to computers at a very early age and in some schools the dictation test is conducted using computers. The kids type their name by using uppercase and lowercase. The teachers found it and asked the 12th class students who are learning C programming to convert the kids name to lower case. And they took up the task of converting the name to lowercase. Can you please help them out?
+Write a program to convert the string to lower case without using string library functions.
+
+ 
+
+Input and Output Format:
+
+Input consists of a string. Assume that the input string consists of only letters and the maximum length of the string is 20.
+
+Refer sample input and output for formatting specifications.
+
+All text in bold corresponds to input and the rest corresponds to output.
+
+ 
+
+Sample Input 1:
+
+Enter the input string
+
+AmphiSoft
+
+
+Sample Output 1:
+The output string is amphisoft
+
+
+Problem Requirements:
+
+*/
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+	char str[100];
+	printf("Enter the input string\n");
+	scanf("%s",str);
+	for(int i=0;str[i]!='\0';i++)
+	{
+	    if(str[i]<=90)
+	        str[i]=str[i]+32;
+	}
+	printf("The output string is %s",str);
+	
+	return 0;
+}
