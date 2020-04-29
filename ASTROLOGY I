@@ -1,0 +1,96 @@
+/*
+
+
+
+Astrologist believes that having a palindromic name is very auspicious . As we all know, a palindrome is a word that can be read the same way in either direction.
+
+Write a program to determine whether a given word is a palindrome or not. Do not use any string library functions.
+
+Note:
+Refer to the problem requirements.
+
+ 
+
+Input Format:
+
+Input consists of a single string. Assume that the maximum length of the string is 50.
+
+ 
+
+Output Format:
+
+Refer sample input and output for formatting specifications.
+
+ 
+
+Sample Input 1:
+
+Enter the word
+
+hannah
+ 
+
+Sample Output 1:
+hannah is a palindrome
+
+ 
+
+Sample Input 2:
+
+Enter the word
+
+bina
+ 
+
+Sample Output 2:
+bina is not a palindrome
+
+
+Problem Requirements:
+C
+Keyword	Min Count	Max Count
+strlen	0	0
+Keyword	Min Count	Max Count
+strcmp	0	0
+Keyword	Min Count	Max Count
+strcat	0	0
+
+
+
+*/
+
+
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int len=0,j=0,i;
+	char str[52],rev[52];
+	printf("Enter the word\n");
+	scanf("%s",str);
+	for(i=0;str[i]!='\0';i++)
+	{
+	    len++;
+	}
+	for(i=len-1;i>=0;i--)
+	{
+	    rev[j]=str[i];
+	    j++;
+	}
+	for(i=0;i<len;i++)
+	{
+	    if(str[i]!=rev[i])
+	    {
+	        break;
+	    }
+	}
+	if(i<len)
+	   printf("%s is not a palindrome",str);
+	else
+	   printf("%s is a palindrome",str);
+	return 0;
+}
